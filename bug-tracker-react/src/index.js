@@ -1,12 +1,13 @@
 import React from 'react'
 import { render } from 'react-dom'
+import Title from './components/Title'
 
-class Hello extends React.Component {
+class App extends React.Component {
   render () {
-    return <p>
-             Hello Bandung!
-           </p>
+    return <div>
+             <Title/>
+           </div>
   }
 }
 
-render(<Hello/>, document.getElementById('app'))
+render(<App/>, document.getElementById('app'))
