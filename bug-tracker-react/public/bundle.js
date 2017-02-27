@@ -9518,7 +9518,6 @@ var App = function (_React$Component) {
           _react2.default.createElement('hr', null),
           _react2.default.createElement(_List2.default, null)
         ),
-        _react2.default.createElement('br', null),
         _react2.default.createElement(_Footer2.default, null)
       );
     }
@@ -22090,48 +22089,83 @@ var Card = function (_React$Component) {
   _createClass(Card, [{
     key: 'render',
     value: function render() {
+      var cards = [{
+        id: '37a5b737-7ce8-5756-b168-8cc57af44378',
+        desc: 'Component bug',
+        severity: 'Low',
+        assignedTo: 'Gana',
+        status: 'Open'
+      }, {
+        id: 'f567e60a-43ea-5540-a4e9-e1934487d3a9',
+        desc: 'System bug',
+        severity: 'High',
+        assignedTo: 'Syanmil',
+        status: 'Closed'
+      }];
       return _react2.default.createElement(
         'div',
-        { className: 'card' },
-        _react2.default.createElement(
-          'header',
-          { className: 'card-header' },
-          _react2.default.createElement(
-            'p',
-            { className: 'card-header-title' },
-            'BugId:'
-          )
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'card-content' },
-          _react2.default.createElement(
+        null,
+        cards.map(function (card) {
+          return _react2.default.createElement(
             'div',
-            { className: 'content' },
-            _react2.default.createElement('span', { className: 'tag is-info' }),
+            { key: card.id },
             _react2.default.createElement(
-              'p',
-              null,
-              'Assigned To:'
-            )
-          ),
-          _react2.default.createElement('br', null),
-          _react2.default.createElement('small', { className: 'tag is-primary' })
-        ),
-        _react2.default.createElement(
-          'footer',
-          { className: 'card-footer' },
-          _react2.default.createElement(
-            'a',
-            { onClick: '', className: 'is-warning card-footer-item' },
-            'Close'
-          ),
-          _react2.default.createElement(
-            'a',
-            { className: 'card-footer-item', onClick: '' },
-            'Delete'
-          )
-        )
+              'div',
+              { className: 'card' },
+              _react2.default.createElement(
+                'header',
+                { className: 'card-header' },
+                _react2.default.createElement(
+                  'p',
+                  { className: 'card-header-title' },
+                  'BugId:',
+                  card.id
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'card-content' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'content' },
+                  card.desc,
+                  _react2.default.createElement(
+                    'span',
+                    { className: 'tag is-info' },
+                    card.severity
+                  ),
+                  _react2.default.createElement(
+                    'p',
+                    null,
+                    'Assigned To:',
+                    card.assignedTo
+                  )
+                ),
+                _react2.default.createElement('br', null),
+                _react2.default.createElement(
+                  'small',
+                  { className: 'tag is-primary' },
+                  card.status
+                )
+              ),
+              _react2.default.createElement(
+                'footer',
+                { className: 'card-footer' },
+                _react2.default.createElement(
+                  'a',
+                  { onClick: '', className: 'is-warning card-footer-item' },
+                  'Close'
+                ),
+                _react2.default.createElement(
+                  'a',
+                  { className: 'card-footer-item', onClick: '' },
+                  'Delete'
+                )
+              )
+            ),
+            _react2.default.createElement('br', null)
+          );
+        })
       );
     }
   }]);
