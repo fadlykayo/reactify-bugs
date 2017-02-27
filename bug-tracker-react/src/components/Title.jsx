@@ -2,9 +2,7 @@ import React from 'react'
 
 class Title extends React.Component {
   render () {
-    return <p>
-             Hello Jakarta!
-           </p>
+    return <h1 className='title is-1'>Bug Tracker <small>by HACKTIV8</small></h1>
   }
 }
 
